@@ -52,6 +52,3 @@ if ! grep -q "root-ro-driver=overlay" /boot/cmdline.txt; then
   echo Adding root-ro-driver parameter to /boot/cmdline.txt
   sed -i "1 s|$| root-ro-driver=overlay|" /boot/cmdline.txt
 fi
-
-echo Restarting RPI
-reboot
